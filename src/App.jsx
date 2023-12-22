@@ -1,11 +1,11 @@
 import AuthInputs from "./components/AuthInputs.jsx";
-import Header from "./components/Header.jsx";
+import TailwindHeader from "./components/TailwindHeader.jsx";
 import Exo2 from "./components/Exo2.jsx";
 
 export default function App() {
     return (
         <>
-            <Header />
+            <TailwindHeader />
             <main>
                 <AuthInputs />
             </main>

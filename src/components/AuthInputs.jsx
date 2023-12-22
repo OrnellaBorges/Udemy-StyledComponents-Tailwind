@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { styled } from "styled-components";
 
-import Button from "./Button";
+import ButtonTailwind from "./Buttons/ButtonTailwind";
 
-import CustomInput from "./Input";
+import InputStyled from "./Inputs/Input-styledCpnts";
+import InputTailwind from "./Inputs/InputTailwind";
 
 const ControlContainer = styled.div`
     display: flex;
@@ -35,7 +36,7 @@ export default function AuthInputs() {
     return (
         <div id="auth-inputs">
             <ControlContainer>
-                <CustomInput
+                <InputStyled
                     label="Email"
                     invalid={emailNotValid}
                     type="email"
@@ -45,16 +46,7 @@ export default function AuthInputs() {
                     }
                 />
 
-                <CustomInput
-                    label="Password"
-                    type="password"
-                    invalid={passwordNotValid}
-                    onChange={(event) =>
-                        handleInputChange("password", event.target.value)
-                    }
-                />
-
-                <CustomInput
+                <InputTailwind
                     label="Password"
                     type="password"
                     invalid={passwordNotValid}
@@ -67,7 +59,7 @@ export default function AuthInputs() {
                 <button type="button" className="text-button">
                     Create a new account
                 </button>
-                <Button onClick={handleLogin}>Sign In</Button>
+                <ButtonTailwind onClick={handleLogin}>Sign In</ButtonTailwind>
             </div>
         </div>
     );
