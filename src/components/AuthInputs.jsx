@@ -53,6 +53,15 @@ export default function AuthInputs() {
                         handleInputChange("password", event.target.value)
                     }
                 />
+
+                <CustomInput
+                    label="Password"
+                    type="password"
+                    invalid={passwordNotValid}
+                    onChange={(event) =>
+                        handleInputChange("password", event.target.value)
+                    }
+                />
             </ControlContainer>
             <div className="actions">
                 <button type="button" className="text-button">
